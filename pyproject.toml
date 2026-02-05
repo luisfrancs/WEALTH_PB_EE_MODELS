@@ -8,8 +8,6 @@ version = "0.1.0"
 description = "WEALTH physical activity and energy expenditure models and utilities"
 readme = "README.md"
 requires-python = ">=3.9"
-
-# Add your main dependencies here
 dependencies = [
     "numpy",
     "pandas",
@@ -17,26 +15,23 @@ dependencies = [
     "joblib",
     "pygt3x"
 ]
-
 authors = [
-    { name = "Luis", email = "luis@example.com" }
+    { name = "Luis Sigcha", email = "luisfrancs@gmail.com" }
 ]
-
 license = { text = "MIT" }
-
 classifiers = [
     "Programming Language :: Python :: 3",
     "Intended Audience :: Science/Research",
-    "Topic :: Scientific/Engineering :: Medical Science Apps."
+    "Topic :: Scientific/Engineering :: Medical Science Apps"
 ]
 
 [tool.setuptools]
 package-dir = { "" = "src" }
+include-package-data = true
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
-# Include non-Python files inside the package
 [tool.setuptools.package-data]
 wealth_pa_ee_models = [
     "models/**/*",
@@ -51,7 +46,3 @@ wealth_pa_ee_models = [
     "**/*.h5",
     "**/*.pt"
 ]
-
-# Ensure package data is included
-[tool.setuptools.include-package-data]
-value = true
