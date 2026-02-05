@@ -3,7 +3,7 @@ requires = ["setuptools>=64", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "WEALTH_PA_EE_MODELS"
+name = "WEALTH_PB_EE_MODELS"
 version = "0.1.0"
 description = "WEALTH physical activity and energy expenditure models and utilities"
 readme = "README.md"
@@ -15,7 +15,7 @@ dependencies = [
     "joblib",
 ]
 authors = [
-    { name = "Luis", email = "luis@example.com" }
+    { name = "Luis", email = "luisfrancs@gmail.com" }
 ]
 license = { text = "MIT" }
 
