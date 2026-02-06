@@ -12,6 +12,7 @@ from functools import reduce
 def minutes_summary(df, encoding_dict, ACTIVITY_ORDER, analytics="activity", plot=True):
     df = df.copy()
     # ---- time handling ----
+    #Check time format
     if pd.api.types.is_datetime64_any_dtype(df["Time"]):
         # already datetime, do nothing (or ensure tz-naive)
         df["Time"] = pd.to_datetime(df["Time"])
