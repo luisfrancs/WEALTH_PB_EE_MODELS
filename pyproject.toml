@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=64", "wheel"]
+requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -20,11 +20,16 @@ authors = [
 license = { text = "MIT" }
 
 [tool.setuptools]
+package-dir = {"" = "src"}
 include-package-data = true
 
 [tool.setuptools.packages.find]
-where = ["."]
-namespaces = false
+where = ["src"]
 
 [tool.setuptools.package-data]
-"*" = ["**/*.csv", "**/*.json", "**/*.yaml", "**/*.yml", "**/*.txt", "**/*.pkl", "**/*.joblib", "**/*.h5", "**/*.pt"]
+wealth_pb_ee_models = [
+  "models/**/*",
+  "sample_data/**/*",
+  "**/*.csv", "**/*.json", "**/*.yaml", "**/*.yml", "**/*.txt",
+  "**/*.pkl", "**/*.joblib", "**/*.h5", "**/*.pt"
+]
