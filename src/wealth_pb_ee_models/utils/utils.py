@@ -5,12 +5,9 @@
 import mat73
 import scipy.io
 import numpy as np
-#from tensorflow import keras
 import pandas as pd
 import matplotlib.pyplot as plt
-#from tensorflow.keras.models import model_from_json
 import warnings
-#import uos_update_LS
 from wealth_pb_ee_models.utils import uos_update_LS
 
 
@@ -109,7 +106,7 @@ def predict_single_file_AP_DATX(file_name, model, encoding_dict,batch_size=512):
     ''' Performs a complete prediction pipe-line to a single file (ActivPAL 20 Hz from a .DATX file)
     Returns: Window based prediction as pandas dataframe with columns Time (tiem-stamps) and activity (as string) '''
     warnings.simplefilter('ignore')
-    window_size=60 #60=3 seconds at 20 Hz
+    window_size=200 #60=3 seconds at 20 Hz
     X,time_stamps=load_data_AP_DATX(file_name=file_name)#load AP data file
     y_predict_proba=predict_PA(X, model,scaling_factor=1,window_size=window_size,step_size=window_size)#predict
     predictions=post_process(y_predict_proba)#POST-PROCESSING
