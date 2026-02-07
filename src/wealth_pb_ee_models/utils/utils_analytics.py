@@ -1,5 +1,89 @@
-## VERSION 4th DECEMBER 2025
-## AUTHOR Luis Sigcha
+"""
+===============================================================================
+Daily Physical Behaviour and Energy Expenditure Summary and Analysis Utilities
+===============================================================================
+
+Version:
+--------
+7 February 2026
+
+Author:
+-------
+Luis Sigcha
+
+Description:
+------------
+This module provides analytical and visualization utilities for summarising
+daily Physical Behaviour (PB) and Energy Expenditure (EE) outcomes derived from
+wearable sensor data.
+
+It is designed to process window-based or sample-wise prediction outputs and
+generate participant-level and group-level summaries, including:
+
+    - Daily minutes per activity
+    - Valid day filtering based on wear-time criteria
+    - Weekday vs weekend comparisons
+    - Weighted weekday/weekend statistics
+    - Group comparison visualisations
+    - Summary tables with uncertainty estimates
+
+The functions in this module are intended to support post-processing,
+statistical analysis, and reporting within digital phenotyping and
+physical activity monitoring studies.
+
+Main Features:
+--------------
+- Automatic handling of multiple time formats
+- Fixed-rate and sample-wise minute aggregation
+- Wear-time and validity filtering
+- Weekday vs weekend stratified analysis
+- Weighted statistical summaries
+- Confidence interval and standard deviation estimation
+- Publication-ready visualisations
+
+Intended Use:
+-------------
+This code is intended for research, validation, and reporting purposes in
+wearable-based behavioural monitoring studies, including applications in
+Parkinson’s disease and physical activity research.
+
+It supports reproducible data analysis workflows and cohort-level comparisons.
+
+Dependencies:
+-------------
+- NumPy
+- Pandas
+- Matplotlib
+- SciPy
+- functools
+
+License:
+--------
+MIT License
+
+Copyright (c) 2025 Luis Sigcha
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+===============================================================================
+"""
+
 
 ## Load the required packages
 
