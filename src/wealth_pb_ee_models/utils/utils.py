@@ -51,7 +51,7 @@ def load_data_AP_DATX(file_name="file.datx"):
     time_stamps=activpal_data.timestamps
     time_stamps=time_stamps.to_numpy()
     X = activpal_data.signals.to_numpy() #get fullscale data as numpy
-    X[:, [2, 1]] = X[:, [1, 2]]#swap axis to harmonize with PALAnalysis export
+    #X[:, [2, 1]] = X[:, [1, 2]]#swap axis to harmonize with PALAnalysis export
     return X,time_stamps
 
 def predict_PA(X, loaded_model, scaling_factor=1,window_size=200,step_size=200,batch_size=512):
